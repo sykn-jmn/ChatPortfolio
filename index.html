@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="image-display">
+        <img src="./img/unknown.png" alt="" onclick="hideImage()">
+    </div>
+    <div id="notice">
+        <p id="noticeMessage">Copied</p>
+    </div>
+    <div class="phoneBody">
+        <div class="phoneScreen">
+            <header>
+                <a href="javascript:;">
+                <img src="./img/chevron-left.svg" alt="">
+                </a>
+                <h2>Chat</h2>
+            </header>
+            <main>
+                <div class="message replying hide">
+                    <img src="./img/jeman.jpg" alt="" class="profile" >
+                    <div class="chat">
+                        <div class="circle jump1"></div>
+                        <div class="circle jump2"></div>
+                        <div class="circle jump3"></div>
+                    </div>
+                </div>
+                <!-- <div class="message left">
+                    <img src="./img/jeman.jpg" alt="" class="profile">
+                    <img src="./img/Loop Game Copy Main.png" class="img-chat chat" onclick="showImage('./img/Loop Game Copy Main.png')">
+                </div> -->
+                <div class="intro">
+                    <img src="./img/jeman.jpg" alt="">
+                    <h4>Jeman Balios Mama</h4>
+                    <p>You are now friends on Fishbol</p>
+                </div>
+            </main>
+            <footer>
+                <a href="javascript:add();" id="addButton"><img src="./img/plus-lg.svg" alt=""></a>
+                <input type="text" id="chatbox" placeholder="Message">
+                <a href="javascript:;" id="sendButton"><img src="./img/send.svg" alt=""></a>
+            </footer>
+        </div>
+    </div>
+</body>
+<script src="./app.js"></script>
+</html>

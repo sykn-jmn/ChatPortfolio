@@ -1,0 +1,379 @@
+:root{
+    --mainColor: #3640c4;
+    --lightMainColor: #949aee;
+    --lighterMainColor: #a9ade7;
+}
+*{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(78, 78, 78);
+}
+
+body{
+    background: linear-gradient(
+        to bottom right, 
+        #cbcef1, var(--mainColor)
+      );   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    margin:0;
+}
+
+
+#image-display{
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    display: none;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #00000065;
+    overflow: hidden;
+    transition: all linear 0.2s;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+#image-display img{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 5vh;
+    height: 90vh;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+}
+
+#notice p{
+    margin: 10px 20px;
+    overflow-x: hidden;
+    color: white;
+    font-weight: 500;
+}
+
+#notice{
+    position: absolute;
+    width: 0;
+    padding: 0px 0px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    background: #c7c7c7;
+    box-shadow: 0px 8px 20px -5px rgb(0 0 0 / 41%);
+    text-align: center;
+    overflow-x: hidden;
+    z-index: 100;
+}
+
+.animateShow{
+    animation: show 1.5s;
+}
+
+@keyframes show{
+    0%   {width: 0px;}
+    25%  {width: 100px;}
+    75%  {width: 100px;}
+    100%  {width: 0px;}
+}
+
+.phoneBody{
+    height: 570px;
+    width: 290px;
+    background: white;
+    padding: 15px;
+    border-radius: 40px;
+    box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.199);
+}
+
+.phoneBody .phoneScreen{
+    height: 540px;
+    width: 260px;
+    /* background: chartreuse; */
+    border-radius: 30px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background: cornflowerblue; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
+.phoneBody .phoneScreen header{
+    display: flex;
+    align-items: center;
+    /* background: rgb(63, 78, 48); */
+}
+
+.phoneBody .phoneScreen header a:hover img{
+    content: url(./img/chevron-left-active.svg);
+}
+
+.phoneBody .phoneScreen header img{
+    width: 20px;
+    margin-right: 14px;
+}
+
+.phoneBody .phoneScreen header h2{
+    font-size: 25px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.phoneBody .phoneScreen main{
+    height: 85%;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: auto;
+    padding-bottom: 10px;
+    /* background: chartreuse; */
+}
+
+.phoneBody .phoneScreen main .intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phoneBody .phoneScreen main .intro img{
+    width: 80px;
+    border-radius: 50px;
+}
+
+.phoneBody .phoneScreen main .intro h4{
+    margin: 6px; 
+}
+
+.phoneBody .phoneScreen main .intro p{
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: #aaaaaa;
+}
+
+.phoneBody .phoneScreen main .message{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.closeToTop{
+    margin-top: 10px !important;
+}
+
+.closeToTop img{
+    visibility: hidden;
+}
+
+.closeToTop.left .chat{
+    border-top-left-radius: 6px !important;
+}
+
+.closeToTop.right .chat{
+    border-top-right-radius: 6px !important;
+}
+
+.closeToTop.left + .message .chat{
+    border-bottom-left-radius: 6px !important;
+}
+
+.closeToTop.right + .message .chat{
+    border-bottom-right-radius: 6px !important;
+}
+
+.phoneBody .phoneScreen main::-webkit-scrollbar{
+    display: none;
+}
+
+.phoneBody .phoneScreen main .message img{
+    border-radius: 100%;
+    /* border: 3px solid var(--mainColor); */
+    width: 30px;
+}
+
+.phoneBody .phoneScreen main .replying{
+    /* background: rgb(131, 131, 80); */
+    transition: all ease-in-out 0.5s;
+}
+
+.show{
+    height:28px;
+}
+
+.hide{
+    /* transition: all ease-in-out 1s; */
+    transform: translateY(50px);
+    height: 0px;
+}
+
+.bar .chat{
+    background: linear-gradient(
+        to left, 
+        #e2db78, #c4ba36
+      );
+    width: 120px;
+}
+
+.phoneBody .phoneScreen main .message .chat .horiBar{
+    height: 8px;
+    background: white;
+    border-radius: 5px;
+    width: 0px;
+    transition: all linear 1s;
+}
+
+.phoneBody .phoneScreen main .message .chat .circle{
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background: #b6b6b6;
+    margin-right: 2px;
+}
+
+.jump1{
+    animation: jump 2s infinite;
+}
+
+.jump2{
+    animation: jump 2s infinite 0.2s;
+}
+
+.jump3{
+    animation: jump 2s infinite 0.4s;
+}
+
+@keyframes jump {
+    0%   {transform: translateY(0px);}
+    25%  {transform: translateY(-5px);}
+    50%  {transform: translateY(5px);}
+    75%  {transform: translateY(0px);}
+    100%  {transform: translateY(0px);}
+}
+
+.phoneBody .phoneScreen main .message .chat{
+    margin: 0px 10px;
+    height: fit-content;
+    min-height: 20px;
+    max-width: 142px;
+    border-radius: 20px;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 10px -2px rgba(0, 0, 0, 0.363);
+    /* background:chocolate; */
+}
+
+.phoneBody .phoneScreen main .message .chat p{
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.phoneBody .phoneScreen main .left{
+    flex-direction: row;
+}
+
+.phoneBody .phoneScreen main .right img{
+    content: url(./img/meme.jpg);
+}
+
+.phoneBody .phoneScreen main .right{
+    flex-direction: row-reverse;
+}
+
+.phoneBody .phoneScreen main .right .chat{
+    background: linear-gradient(
+        to right, 
+        var(--lightMainColor), var(--mainColor)
+      );
+}
+
+.phoneBody .phoneScreen main .right .chat p{
+    color: white;
+}
+
+.phoneBody .phoneScreen main .message .img-chat{
+    width: 200px;
+    margin: 0px 10px;
+    border-radius: 20px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.phoneBody .phoneScreen footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.phoneBody .phoneScreen footer a{
+    /* background: violet; */
+    border-radius: 50px;
+    box-shadow: 0px 2px 10px -2px rgba(0, 0, 0, 0.363);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in 0.2s;
+}
+
+.phoneBody .phoneScreen footer a img{
+    width: 20px;
+    transition: all ease-in-out 0.4s;
+}
+
+.phoneBody .phoneScreen footer a:hover{
+    box-shadow: 0px 4px 10px -4px rgba(0, 0, 0, 0.363);
+}
+
+.phoneBody .phoneScreen footer #addButton:hover{
+    background: var(--lightMainColor);
+}
+
+.phoneBody .phoneScreen footer #addButton:hover img{
+    content: url(./img/plus-lg-active.svg);
+    transform: rotate(180deg);
+}
+
+.phoneBody .phoneScreen footer #sendButton:hover{
+    background: var(--lightMainColor);
+}
+
+.phoneBody .phoneScreen footer #sendButton:hover img{
+    content: url(./img/send-active.svg);
+    transform: rotate(0deg);
+}
+
+.phoneBody .phoneScreen footer #sendButton img{
+    transform: rotate(40deg);
+}
+
+.phoneBody .phoneScreen footer input{
+    height: 33px;
+    width: 50%;
+    border: 2px solid #dddddd;
+    padding: 0px 15px;
+    border-radius: 50px;
+    transition: all ease-in 0.2s;
+    /* box-shadow: 0px 4px 10px -4px rgba(0, 0, 0, 0.363); */
+}
+
+.phoneBody .phoneScreen footer input:focus{
+    /* background: chartreuse; */
+    border: 2px solid #aaaaaa;
+    outline: none;
+}
+
